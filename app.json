@@ -1,42 +1,51 @@
 {
 	"expo": {
-	  "name": "Road App",
-	  "slug": "road-app",
-	  "version": "1.0.0",
-	  "orientation": "portrait",
-	  "icon": "./assets/icon.png",
-	  "userInterfaceStyle": "light",
-	  "newArchEnabled": true,
-	  "splash": {
-		"image": "./assets/splash-icon.png",
-		"resizeMode": "contain",
-		"backgroundColor": "#ffffff"
-	  },
-	  "extra": {},
-	  "ios": {
-		"supportsTablet": true,
-		"config": {}
-	  },
-	  "android": {
-		"adaptiveIcon": {
-		  "foregroundImage": "./assets/adaptive-icon.png",
-		  "backgroundColor": "#ffffff"
+		"name": "music-player",
+		"slug": "music-player",
+		"version": "1.0.0",
+		"orientation": "portrait",
+		"icon": "./assets/icon.png",
+		"userInterfaceStyle": "light",
+		"newArchEnabled": true,
+		"splash": {
+			"image": "./assets/splash-icon.png",
+			"resizeMode": "contain",
+			"backgroundColor": "#ffffff"
 		},
-		"edgeToEdgeEnabled": true,
-		"config": {
-		  "googleMaps": {}
-		}
-	  },
-	  "web": {
-		"favicon": "./assets/favicon.png"
-	  },
-	  "plugins": [
-		[
-		  "expo-location",
-		  {
-			"locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+		"ios": {
+			"supportsTablet": true,
+			"config": {}
+		},
+		"android": {
+			"adaptiveIcon": {
+				"foregroundImage": "./assets/adaptive-icon.png",
+				"backgroundColor": "#ffffff"
+			},
+			"edgeToEdgeEnabled": true,
+			"config": {
+				"googleMaps": {}
+			},
+			"permissions": [
+				"android.permission.ACCESS_COARSE_LOCATION",
+				"android.permission.ACCESS_FINE_LOCATION"
+			]
+		},
+		"web": {
+			"favicon": "./assets/favicon.png"
+		},
+		"plugins": [
+			[
+				"expo-location",
+				{
+					"locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+				}
+			]
+		],
+		"extra": {
+		  "eas": {
+			"projectId": "c8919b19-62f6-4309-a907-034cd621162d"
 		  }
-		]
-	  ]
-	}
-  }
+		},
+		"owner": "eloike"
+	}	
+}
